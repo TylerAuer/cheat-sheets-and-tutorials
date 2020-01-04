@@ -14,6 +14,7 @@ An arrow function expression is a syntactically compact alternative to a regular
 There is one subtle difference in behavior between ordinary function functions and arrow functions. Arrow functions do not have their own this value. The value of this inside an arrow function is always inherited from the enclosing scope.
 
 ### Examples
+
 ```JavaScript
 // job is the input and the restult of job.isSelected() is returned
 var selected = allJobs.filter(job => job.isSelected());
@@ -31,10 +32,10 @@ $("#confetti-btn").click(event => {
 var chewToys = puppies.map(puppy => {});   // BUG!
 var chewToys = puppies.map(puppy => ({})); // ok
 ```
+
 When you just need a simple function with one argument, the new arrow function syntax is simply `Identifier => Expression`. You get to skip typing function and return, as well as some parentheses, braces, and a semicolon.
 
-
-### Resources
+### Arrow Function Resources
 
 * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 * [Hacks.mozilla](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)
@@ -48,9 +49,9 @@ Takes a array and calls a function for each element in the array. The outputs ar
 * `function(currentValue, index, arr)` - **Required**: A function to be run for each element in the array.
 Function arguments:
   * `currentValue` - **Required**: The value of the current element
-  * `index`	- **Optional**: The array index of the current element
+  * `index` - **Optional**: The array index of the current element
   * `arr` - **Optional**: The array object the current element belongs to
-* `thisValue`	- **Optional.** A value to be passed to the function to be used as its "this" value. If this parameter is empty, the value "undefined" will be passed as its "this" value
+* `thisValue` - **Optional.** A value to be passed to the function to be used as its "this" value. If this parameter is empty, the value "undefined" will be passed as its "this" value
 
 ### Example
 
@@ -66,6 +67,7 @@ console.log(materials.map(material => material.length));
 // expected output: Array [8, 6, 7, 9]
 ```
 
-### Resources
+### `map()` Resources
+
 * [W3Schools](https://www.w3schools.com/jsref/jsref_map.asp)
 * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
