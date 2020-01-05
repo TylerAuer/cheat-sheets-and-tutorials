@@ -5,7 +5,7 @@
 ## Table of Contents
 
 * [Arrow Functions](#Arrow-Functions)
-* [array.map](#array.map())
+* [array.map](#`array.map()`)
 
 ## Arrow Functions
 
@@ -71,3 +71,4 @@ console.log(materials.map(material => material.length));
 
 * [W3Schools](https://www.w3schools.com/jsref/jsref_map.asp)
 * [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+* [Deep Dive into array.map()](https://www.robinwieruch.de/javascript-map-array)
