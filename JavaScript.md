@@ -5,7 +5,7 @@
 ## Table of Contents
 
 * [Arrow Functions](#Arrow-Functions)
-* [array.map](#`array.map()`)
+* [array.map](#array.map)
 
 ## Arrow Functions
 
