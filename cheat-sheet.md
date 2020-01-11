@@ -44,4 +44,13 @@ When working in the command line, you are always somewhere in the file system of
 
 ## Visual Studio Code
 
-*
+### Line Actions
+
+* <kbd>⇧ Shift</kbd> + <kbd>⌥ Option</kbd> + <kbd>Up / Down</kbd> - Copy current line above or below
+* <kbd>⌥ Option</kbd> + <kbd>Up / Down</kbd> - Move current line up or down
+* <kbd>⇧ Shift</kbd> + <kbd>⌘ Command</kbd> + <kbd>K</kbd> - Delete the current line
+
+### Multiple Cursors
+
+* <kbd>⌥ Option</kbd> + <kbd>click</kbd> - Keep clicking to add multiple cursors. Exit with <kbd>esc</kbd>
+* <kbd>⇧</kbd> + <kbd>⌘ Command</kbd> + <kbd>L</kbd> - Use shortcut with a string selected. Will replace all instances of that string.
