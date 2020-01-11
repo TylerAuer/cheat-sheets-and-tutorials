@@ -44,6 +44,10 @@ When working in the command line, you are always somewhere in the file system of
 
 ## Visual Studio Code
 
+### Formatting
+
+* <kbd>⌘ Command</kbd> + <kbd>K</kbd> then <kbd>S</kbd> - Save without auto-formatting
+
 ### Line Actions
 
 * <kbd>⇧ Shift</kbd> + <kbd>⌥ Option</kbd> + <kbd>Up / Down</kbd> - Copy current line above or below
