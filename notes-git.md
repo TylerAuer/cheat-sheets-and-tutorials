@@ -13,8 +13,9 @@
   2. Staging Area (AKA Index) - Queued up files, ready for the next commit which push them to the local git repository 
   3. Git Local Repository - in a `/.git` folder holds all of the git files and histories
   4. Github External Repository
-- Branches - `master` is the default branch
+- **Branches** - `master` is the default branch
 - `HEAD` - Refers to the most recent commit in the current branch
+- **Fast-forward Merge** - Is a merge where the branch being merged was ahead **AND** no changes had been made of on the destination branch. In otherwords, branch off master, make 5 commits and then merge. Since the master did not have any changes after you split off your branch, then the branch's commits can just get put right onto the master branch. This "fast-forwards" the master branch.
 
 ## Commands Explained
 
@@ -52,7 +53,19 @@
 - `$ git diff --staged HEAD` - Compares the staged area to the `HEAD` (the last commit)
 - `$ git diff -- [path/to/diff.ext]` - Only shows the changes within one file
 - `$ git diff HEAD HEAD^` - Compares most-recent and second-most recent commits in current branch
-- `$ git diff master origin/master` - 
+- `$ git diff master origin/master` - compares the HEAD of the two listed sources
+
+**`$ git branch` and `$ git checkout`**
+
+- `$ git branch -a` - lists all branches
+- `$ git checkout [branch_name]` - switches branches
+- `$ git checkout -b [branch_name]` - creates a new branch and switches to it
+- `$ git branch -d [branch_name]` - deletes the branch (useful after merging)
+
+**`$ git merge`**
+
+- Must be a on the branch you want to merge into
+- Use `$ git merge [branch_name] --no-ff` - to ensure that the branching is preserved even if the branch is then deleted
 
 ## Command Line Commands
 
