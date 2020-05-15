@@ -5,6 +5,7 @@
 - Best practice to `$ git pull` before `$ git push`
 - Can issue (most) git commands from anywhere in the directory
 - Using git to rename (`$ git mv old_name.ext new_name.ext`) helps git recognize that the file is renamed. If you use the file system it will think a file was deleted and then a new file was created.
+- If you are working on a feature branch but the master branch has advanced, you can `rebase` the master changes into your branch to incorporate the changes without merging
 
 ## Key Terms
 - Repositories
@@ -34,6 +35,8 @@
 **`$ git commit -m "commit message"`** - Commits stages files
 
 - `$ git commit -am "commit message"` - Stages any changed files and then commits in one step. Good for simple changes
+- `$ git commit --amend` - Combines any staged changes with the most recent commit.
+- `$ git commit --amend -m "Message"` - Updates the last commit's message
 
 **`$ git ls-files`** - List all files currently being tracked in the repo
 
