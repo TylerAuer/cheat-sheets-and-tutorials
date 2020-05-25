@@ -87,7 +87,11 @@ Since `rem` is based on the root font-size in the html selector, setting that to
 
 **rems are not supported below IE9**
 
+<<<<<<< HEAD
 ## Website Rendering: The Visual Formatting Model
+=======
+### Website Rendering: The Visual Formatting Model
+>>>>>>> 8aade837692441219535e3129c0bd5f804213b2a
 
 An algorithm that calculates boxes and determines the layout of these boxex for each element in the render tree, in order to determine the final layout of the page.
 
