@@ -51,3 +51,38 @@ The browser prioritizes based on the following from top to bottom:
 
 ### Inheritance
 
+A way of propegating property values from parent elements to their children. Designed to make code more maintainable and **should be used whenever possible**.
+
+Not all properties are inherated, need to check the specifications of each property. 
+
+Any cascaded value (value assigned with CSS selector) takes precendence over inherated values.
+
+The computed value is inherited, not the declared value. For example, if a parent element has the property: `line-height: 150%`, 150% is **not** passed, instead the value that 150% is computed to be is passed.
+
+
+Properties related to text are generally inherated, but borders, margins, and padding are generally not -- that would be annoying.
+
+Can use `inherit` keyword to force inheritence of a specific property. This is often used in lieu of universal selectors because universal selectors might mess up plugins or external style sheets. Ex:
+```css
+*,
+*::before,
+*::after {
+  /* Forces inheritance */
+  box-sizing: inherit;
+}
+
+body {
+  /* Sets box sizing which is inherated by all children recursively */
+  box-sizing: border-box;
+}
+```
+
+### Converting px to rem
+
+#### Why use rem?
+
+By using rem units, we create an easy way to change the size of everything using the global font-size. This is really handy for media queries and adjusting for mobile. Also, rescales everything nicely when the user zooms in with the browser.
+
+Since `rem` is based on the root font-size in the html selector, setting that to 10px makes it easy to convert anything from px to rem. Just divide any pixel measurement by 10. But, setting the default font-size as a pixel value is a **bad idea** because it overrides users' browsers settings. People with bad vision will often set the default font-size to be larger, so you want to use a % value here. Setting the font-size to 100% will make the default size 100% of the user's browser setting. So, setting this at 62.5% converts a common 16px default font-size to a 10px size. This % approach still allows the user to "zoom" in on the page.
+
+**rems are not supported below IE9**
