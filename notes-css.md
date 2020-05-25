@@ -86,3 +86,75 @@ By using rem units, we create an easy way to change the size of everything using
 Since `rem` is based on the root font-size in the html selector, setting that to 10px makes it easy to convert anything from px to rem. Just divide any pixel measurement by 10. But, setting the default font-size as a pixel value is a **bad idea** because it overrides users' browsers settings. People with bad vision will often set the default font-size to be larger, so you want to use a % value here. Setting the font-size to 100% will make the default size 100% of the user's browser setting. So, setting this at 62.5% converts a common 16px default font-size to a 10px size. This % approach still allows the user to "zoom" in on the page.
 
 **rems are not supported below IE9**
+
+## Website Rendering: The Visual Formatting Model
+
+An algorithm that calculates boxes and determines the layout of these boxex for each element in the render tree, in order to determine the final layout of the page.
+
+Takes into account:
+
+- Dimensions of boxes: box model
+- Box type: inline, block...
+- Positioning scheme: floats, positioning
+- Stacking Contents
+- Other elements of the render tree
+- Viewport size, image dimensions
+
+### The Box Model
+
+Each and every element on the web page can be scene as a rectangular box with width, height, padding, border, and margin. But, these are optional. A border, for example, is not required.
+
+The area outside of the content area but inside the border is known as the padding. Background-color and Background-image do cover the padding areas.
+
+Total width includes the border-left, padding-left, defined width, padding-rigth, border-right.
+
+Using `box-sizing: border-box` redefines the width and height to include everything but the margin
+
+### Box Types
+
+The box type is defined by the display property. Ex: `display: flex` or `display: inline-block`. All elements have default properties. `block` is usually the default display property.
+
+#### Block-Level Boxes
+
+- Take up 100% of the parent's width
+- Vertical, one after another
+- Box-model applies as described above
+
+#### Inline
+
+- Content distributed in lines
+- Occupies only content's space
+- No line-breaks
+- No heights and widths -- can't use these properties here
+- Paddings and margins on horizontal
+
+#### Inline-block
+
+- Mix of block and inline
+- Occupy only contents space (like inline)
+- No line breaks (like inline)
+- Box-model applies as show (like block-level)
+
+### Positioning Schemes
+
+#### Normal Flow
+
+- Default scheme when not floated and no absolute positioned. Still used with `position: relative`
+- Elements laid out according to their source order
+
+#### Floats
+
+- Removed from the normal flow
+- Text and inline elements wrap around the floated element
+- The container will not adjust its height to the element (`clearfix` is the fix for this)
+
+#### Absolute Positioning
+
+- Element is removed from the normal flow
+- No impact on surrounding content or elements
+- We use `top`, `bottom`, `left`, `right`
+
+### Stacking Context
+
+Are like layers to "paint" the stack. Most often adjusted with z-index, but others affect it to.
+
