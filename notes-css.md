@@ -162,3 +162,36 @@ The box type is defined by the display property. Ex: `display: flex` or `display
 
 Are like layers to "paint" the stack. Most often adjusted with z-index, but others affect it to.
 
+## CSS Architecture, Components, and BEM
+
+**Component Driven Design** - Divide page into modular parts that makes up the interface. Components should be resusable and independent.
+
+Have a structure for naming the classes. **BEM** is a way of naming CSS classes.
+
+### Block Element Modifier (BEM)
+
+A **block** is a standalone component that is meaningful on its own.
+
+An **element** is part of a block that has no meaning on its own.
+
+A **modifier** is a defferent version of a block or an element
+
+Uses very low specificity classes. Here are the examples:
+
+```CSS
+.block {}
+.block__element {}
+.block__element--modifier {}
+```
+
+### Architecture
+
+**7-1 Pattern** 7 different folders for partial Sass files, and 1 main Sass file (or other CSS preprocessor) to import all other files into a compiled CSS stylesheet.
+
+- `base/` - basic product definitions
+- `components/` - 1 file for each componet
+- `layout/` - overall layout
+- `pages/` - styles for specific pages
+- `themes/` - if you want to have different themes
+- `abstracts/` - variables and mixins
+- `vendors/` - all 3rd party css
