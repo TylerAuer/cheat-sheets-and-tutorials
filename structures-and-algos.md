@@ -55,3 +55,25 @@ Unlike linked lists, the `add()` and `remove()` methods live on the `Node` not o
    **Solution:** Very similar to above. Start with array for the children like above, but have it be filled with `[0, null]` where `null` is a marker between levels of the tree. When you reach `null` have your width counter/tracker move to the next level.
 3. Validate a binary search tree (confirm that the left node is always less than the right node)
    **Solution:** Recursively call a validator function on each node with two additional parameters `min` and `max`. Whenever you are about to move to a left child, set the max to the current node's data, since that is the max value the left child can be. When you move right, set the min. Call this recursively, returning true all the way up or returning false if anything is out of place.
+
+## Sorting Algorithms
+
+When solving a problem, you can assume that, at worst, sorting will be O(n*log(n))
+
+### Bubble Sort
+
+O(n^2) at the worst case. Inefficient with large collections of data (or unknown sizes).
+
+Iterate through array, comparing each element with the one after it. If they are out of order, swap them. After the first pass through the array, the largest element is guaranteed to be at the end. Repeat, but only up to the second to last element. Now the last two are the largest two in the correct order. Repeat until done.
+
+### Selection Sort
+
+O(n^2) at the worst case. Inefficient with large collections of data (or unknown sizes).
+
+Selects the minimum value in the array and places in the front, then looks through the rest of the array (starting at index 1) and finds the min of that subarray, putting the result at index 1. Repeats with the subsubarray...
+
+### Merge Sort
+
+O(n*log(n))
+
+Recursively splits arrays in half until array's length is 1. Then uses a helper function to merge (or weave) the functions back together in the appropriate order.
