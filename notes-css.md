@@ -195,3 +195,46 @@ Uses very low specificity classes. Here are the examples:
 - `themes/` - if you want to have different themes
 - `abstracts/` - variables and mixins
 - `vendors/` - all 3rd party css
+
+## CSS Preprocessor
+
+An extention of CSS that adds power to the language. You write in another language (Less, SASS, Stylus). It is then compiled into CSS.
+
+### SASS
+
+Features SASS adds to CSS:
+
+- **Variables** - Used for values like colors, font-sizes, spacing, etc.
+- **Nesting** - Visually nest selectors within each other. Easier to understand and less code needed
+- **Operators** - Can do mathematical operations inside of CSS
+- **Partials and Imports** - Can split CSS into different and more maintainable files
+- **Mixins** - Reusable chunks of code
+- **Functions** - Similar to mixins, but they produce a value that can be used
+- **Extends** - To make different selectors inherit declarations that are common to all of them
+- **Control Directives** - For writing complex code using conditionals and loops (not covered in Udemy course)
+
+#### Different SASS Syntax
+
+SASS has two different syntaxes. SASS is indent-based (like Python). SCSS is closer to CSS with {}. The advantage of SCSS is that any CSS file is already valid SCSS. So, it's easy to convert projects.
+
+```Sass
+.nav
+  list-style: none
+  float: left
+
+  & li
+    display: inline-block
+    margin-left: 30px
+```
+
+```SCSS
+.nav {
+  list-style: none;
+  float: left;
+
+  & li {
+    display: inline-block;
+    margin-left: 30px;
+  }
+}
+```
